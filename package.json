@@ -12,13 +12,22 @@
   },
   "dependencies": {
     "@orama/orama": "^3.1.18",
+    "@orama/stopwords": "^3.1.18",
+    "@orama/tokenizers": "^3.1.18",
+    "@radix-ui/react-collapsible": "^1.1.12",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-presence": "^1.1.5",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "class-variance-authority": "^0.7.1",
     "fumadocs-core": "16.9.3",
     "fumadocs-mdx": "15.0.11",
     "fumadocs-ui": "16.9.3",
     "lucide-react": "^1.17.0",
     "next": "16.2.7",
+    "next-themes": "^0.4.6",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "scroll-into-view-if-needed": "^3.1.0",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {

@@ -1,4 +1,7 @@
 'use client';
+import { create } from '@orama/orama';
+import { createTokenizer } from '@orama/tokenizers/mandarin';
+import { useDocsSearch } from 'fumadocs-core/search/client';
 import {
   SearchDialog,
   SearchDialogClose,
@@ -10,15 +13,17 @@ import {
   SearchDialogOverlay,
   type SharedProps,
 } from 'fumadocs-ui/components/dialog/search';
-import { useDocsSearch } from 'fumadocs-core/search/client';
-import { create } from '@orama/orama';
 import { useI18n } from 'fumadocs-ui/contexts/i18n';
 
-function initOrama() {
+function initOrama(locale?: string) {
   return create({
     schema: { _: 'string' },
-    // https://docs.orama.com/docs/orama-js/supported-languages
-    language: 'english',
+    components: {
+      // 当区域设置为中文（例如 'cn' 或 'zh'）时，注入 Orama 的普通话分词器
+      tokenizer: locale === 'cn' || locale === 'zh'
+        ? createTokenizer()
+        : undefined,
+    },
   });
 }
 

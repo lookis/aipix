@@ -6,13 +6,22 @@
       "name": "aipix",
       "dependencies": {
         "@orama/orama": "^3.1.18",
+        "@orama/stopwords": "^3.1.18",
+        "@orama/tokenizers": "^3.1.18",
+        "@radix-ui/react-collapsible": "^1.1.12",
+        "@radix-ui/react-popover": "^1.1.15",
+        "@radix-ui/react-presence": "^1.1.5",
+        "@radix-ui/react-scroll-area": "^1.2.10",
+        "class-variance-authority": "^0.7.1",
         "fumadocs-core": "16.9.3",
         "fumadocs-mdx": "15.0.11",
         "fumadocs-ui": "16.9.3",
         "lucide-react": "^1.17.0",
         "next": "16.2.7",
+        "next-themes": "^0.4.6",
         "react": "^19.2.7",
         "react-dom": "^19.2.7",
+        "scroll-into-view-if-needed": "^3.1.0",
         "tailwind-merge": "^3.6.0",
       },
       "devDependencies": {
@@ -254,6 +263,10 @@
     "@nolyfill/is-core-module": ["@nolyfill/is-core-module@1.0.39", "https://registry.npmmirror.com/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz", {}, "sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA=="],
 
     "@orama/orama": ["@orama/orama@3.1.18", "https://registry.npmmirror.com/@orama/orama/-/orama-3.1.18.tgz", {}, "sha512-a61ljmRVVyG5MC/698C8/FfFDw5a8LOIvyOLW5fztgUXqUpc1jOfQzOitSCbge657OgXXThmY3Tk8fpiDb4UcA=="],
+
+    "@orama/stopwords": ["@orama/stopwords@3.1.18", "https://registry.npmmirror.com/@orama/stopwords/-/stopwords-3.1.18.tgz", {}, "sha512-W8V7m7RnCme+99OmKl/xs5rf6OUhFpr0aPGVmPrXzTLSg4ZqSbRY2euS2S/lgjjYi/0NhEWqwoq8nDY6Ihx4EA=="],
+
+    "@orama/tokenizers": ["@orama/tokenizers@3.1.18", "https://registry.npmmirror.com/@orama/tokenizers/-/tokenizers-3.1.18.tgz", { "dependencies": { "@orama/orama": "3.1.18" } }, "sha512-Ra4dFddWZ7hCGPAehnd/6QZjlzQvczYSt1y1Fq4HteJqRu2yvfR6fXvxiUnKi+HIgJYPxKhebJEjvJdF8LYQWg=="],
 
     "@radix-ui/number": ["@radix-ui/number@1.1.2", "https://registry.npmmirror.com/@radix-ui/number/-/number-1.1.2.tgz", {}, "sha512-ceTwaxc4I5IOi97DgCotl3pqiyRGvffcc0oOsE2dQYaJOFIDsDt4VWG6xEbg1QePv9QWausCEIppud/tJ1wNig=="],
 

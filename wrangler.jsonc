@@ -1,0 +1,10 @@
+{
+  // Static site deployment for Cloudflare Pages
+  // Framework preset must be set to "None" in Cloudflare dashboard
+  // to prevent auto-injection of @opennextjs/cloudflare
+  "name": "aipix",
+  "compatibility_date": "2026-06-10",
+  "site": {
+    "bucket": "./out"
+  }
+}

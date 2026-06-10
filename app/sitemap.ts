@@ -4,19 +4,19 @@ import type { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yourwebsite.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
   // Fetch all documentation pages mapped by Fumadocs
   const docPages = source.getPages()
     .filter((page) => !page.data.draft)
     .map((page) => ({
-    url: `${baseUrl}${page.url}`,
-    // If you track modified times or have custom frontmatter data, 
-    // you can pass page.data.lastModified here
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }));
+      url: `${baseUrl}${page.url}`,
+      // If you track modified times or have custom frontmatter data, 
+      // you can pass page.data.lastModified here
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }));
 
   // Include your main marketing/landing pages manually
   const staticPages = [

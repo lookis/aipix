@@ -51,11 +51,15 @@ export async function generateMetadata(props: PageProps<'/docs/[[...slug]]'>): P
   const page = source.getPage(params.slug);
   if (!page) notFound();
   page.data.description
+  const slugPath = params.slug ? `/${params.slug.join('/')}` : '';
+
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
     title: page.data.title,
     description: page.data.description,
     keywords: page.data.keywords,
+    alternates: {
+      canonical: `/docs${slugPath}`,
+    },
     openGraph: {
       images: getPageImage(page).url,
     },

@@ -52,6 +52,7 @@ export async function generateMetadata(props: PageProps<'/docs/[[...slug]]'>): P
   if (!page) notFound();
   page.data.description
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
     title: page.data.title,
     description: page.data.description,
     keywords: page.data.keywords,

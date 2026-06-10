@@ -1,10 +1,17 @@
-import { Inter } from 'next/font/google';
 import { Provider } from '@/components/provider';
+import { Inter } from 'next/font/google';
 import './global.css';
 
 const inter = Inter({
   subsets: ['latin'],
 });
+
+export const metadata = {
+  title: {
+    default: 'AI 像素岛',
+    template: '%s - AI 像素岛',
+  },
+};
 
 export default function Layout({ children }: LayoutProps<'/'>) {
   return (

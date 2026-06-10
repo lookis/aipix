@@ -2,6 +2,7 @@ import { source } from '@/lib/source'; // Adjust this path to where your Fumadoc
 import type { MetadataRoute } from 'next';
 
 export const dynamic = 'force-static';
+export const revalidate = 86400; // Revalidate daily (24 hours)
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';

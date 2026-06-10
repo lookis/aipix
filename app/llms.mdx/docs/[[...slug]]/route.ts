@@ -1,7 +1,7 @@
 import { getLLMText, getPageMarkdownUrl, source } from '@/lib/source';
 import { notFound } from 'next/navigation';
 
-export const revalidate = false;
+export const revalidate = 86400; // Revalidate daily (24 hours)
 
 export async function GET(_req: Request, { params }: RouteContext<'/llms.mdx/docs/[[...slug]]'>) {
   const { slug } = await params;

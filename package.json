@@ -28,10 +28,10 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "scroll-into-view-if-needed": "^3.1.0",
-    "tailwind-merge": "^3.6.0"
+    "tailwind-merge": "^3.6.0",
+    "@opennextjs/cloudflare": "^1.19.11"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.19.11",
     "@tailwindcss/postcss": "^4.3.0",
     "@types/mdx": "^2.0.13",
     "@types/node": "^25.9.1",

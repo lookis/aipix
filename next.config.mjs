@@ -18,16 +18,8 @@ const config = {
           },
         ],
       },
-      {
-        // Static assets with content hash: 1 year cache is correct
-        source: '/_next/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
+      // Note: _next/static/* headers are handled by public/_headers
+      // because Cloudflare Workers don't serve static assets
     ];
   },
 };
